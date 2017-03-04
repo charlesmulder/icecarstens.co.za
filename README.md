@@ -1,10 +1,15 @@
-# icecarstens.co.za
-Ice Carstens Publicity is a turn-key media promotions company that specialises in PR for  South African bands, artists, musicians, and celebrities. We offer the full promotions package, including radio sampling, CD launches, tour logistics, music video promotion, festival- and events PR, as well as profile publicity. Additionally, we also offer social media marketing and PPC services. In short - everything you need to turn up the volume on your brand and get the word out there!
+# Wordpress Install
 
-## Quickstart
+## Local
+
+```bash
+$ USER_NAME=$USER USER_ID=$(id -u) docker-compose up --remove-orphans --build
 ```
-$ python -m SimpleHTTPServer
+
+## Installing plugins
+```bash
+$ docker exec --user $USER -ti icecarstenscoza_wordpress_1 wp plugin install mailchimp-for-wp jetpack imsanity the-events-calendar updraftplus --activate
 ```
 
 ## Resources
-* [Bulma CSS Framework](http://bulma.io/)
+* [Wordpress Salt Generator](https://api.wordpress.org/secret-key/1.1/salt/)
